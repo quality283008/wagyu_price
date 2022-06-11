@@ -1,12 +1,8 @@
+"use strict";
 $(function () {
-  $('a[href^="#"]').click(function () {
-    var href = $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
-    var speed = 500;
+  $('#page-top').on(click, function () {
     $("html, body").animate({
-      scrollTop: position
-    }, speed, "swing");
-    return false;
+      scrollTop: 0
+    }, 500);
   });
 });
